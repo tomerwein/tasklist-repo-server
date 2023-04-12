@@ -8,7 +8,7 @@ const app = express();
 const port = 3500 || process.env.PORT;
 
 const allowedOrigins = 
-['http://localhost:3000', 'https://my-tasklist-web.s3.eu-west-3.amazonaws.com/index.html' ];
+['http://localhost:3000', 'https://my-tasklist-web.s3.eu-west-3.amazonaws.com/index.html'];
 
 app.use(cors({
   origin: function (origin, callback) {
