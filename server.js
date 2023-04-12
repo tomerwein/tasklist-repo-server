@@ -5,9 +5,10 @@ import fs from 'fs';
 import argon2 from 'argon2';
 
 const app = express();
-const port = 3500;
+const port = 3500 || process.env.PORT;
 
-const allowedOrigins = ['http://localhost:3000', 'http://15.237.81.210'];
+const allowedOrigins = 
+['http://localhost:3000', 'https://my-tasklist-web.s3.eu-west-3.amazonaws.com/index.html' ];
 
 app.use(cors({
   origin: function (origin, callback) {
