@@ -23,6 +23,10 @@ app.use(cors({
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+  res.status(200).send('It works!');
+});
+
 app.get('/signin', async (req, res) => {
   const { user, password } = req.query;
   const existingData = fs.readFileSync('data/db.json');
